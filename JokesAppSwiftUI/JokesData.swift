@@ -8,14 +8,17 @@
 import Foundation
 
 // MARK: - Crypto
-struct Welcome: Codable {
+struct Welcome: Identifiable, Codable {
+    let id = UUID()
     var type: String
     var value: [Value]
 }
 
 // MARK: - Value
-struct Value: Codable {
+struct Value: Identifiable, Codable {
     var id: Int
     var joke: String
     var categories: [String]
 }
+
+// https://raw.githubusercontent.com/atilsamancioglu/JokesAppJsonData/main/chuck.json
