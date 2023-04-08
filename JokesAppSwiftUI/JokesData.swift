@@ -21,4 +21,4 @@ struct Value: Identifiable, Codable {
     var categories: [String]
 }
 
-// https://raw.githubusercontent.com/atilsamancioglu/JokesAppJsonData/main/chuck.json
+

@@ -8,9 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @ObservedObject var jokesVM = JokesViewModel()
+    
+    
+    
     var body: some View {
-        VStack {
-          
+        
+        List(jokesVM.jokes) { element in
+            
         }
     
     }
