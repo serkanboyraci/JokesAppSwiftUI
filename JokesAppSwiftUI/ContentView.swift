@@ -17,9 +17,20 @@ struct ContentView: View {
         NavigationView {
             List(jokesVM.jokes) { element in
                 Text(element.joke)
+            }.toolbar {
+                Button(action: addJoke) {
+                    Text("Get New Joke")
+                }
             }
-        }.navigationBarTitle(Text("Jokes App"))
+            
+            .navigationTitle("Jokes App")
+        }
     }
+    
+    func addJoke() {
+        jokesVM.getJokes()
+    }
+    
 }
 
 struct ContentView_Previews: PreviewProvider {
