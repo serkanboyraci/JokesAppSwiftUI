@@ -14,11 +14,11 @@ struct ContentView: View {
     
     
     var body: some View {
-        
-        List(jokesVM.jokes) { element in
-            
-        }
-    
+        NavigationView {
+            List(jokesVM.jokes) { element in
+                Text(element.joke)
+            }
+        }.navigationBarTitle(Text("Jokes App"))
     }
 }
 
